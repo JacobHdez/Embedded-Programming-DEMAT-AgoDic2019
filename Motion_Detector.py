@@ -17,9 +17,9 @@ update_gray = update_back
 
 packet_send = 0
 motion_detected = 0
-
-count_motion = 1
 '''
+count_motion = 1
+
 print("UDP target IP:", UDP_IP_1)
 print("UDP target port:", UDP_PORT_1)
 
@@ -79,10 +79,10 @@ while True:
 				sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 				sock.sendto(bytes_to_send, (UDP_IP_1, UDP_PORT_1))
 				sock.sendto(bytes_to_send, (UDP_IP_2, UDP_PORT_2))
-
-				#print(count_motion, MESSAGE)
+				'''
+				print(count_motion, MESSAGE)
 				count_motion += 1
-
+				'''
 				packet_send = 1
 
 			(x, y, w, h) = cv2.boundingRect(contour)
